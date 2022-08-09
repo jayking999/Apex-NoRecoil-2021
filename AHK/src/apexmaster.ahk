@@ -207,85 +207,9 @@ DetectAndSetWeapon()
         return
     }
     ; then check the weapon type
-    if (check_point_color == LIGHT_WEAPON_COLOR) {
-        if (CheckWeapon(R301_PIXELS)) {
-            current_weapon_type := R301_WEAPON_TYPE
-            current_pattern := R301_PATTERN
-        } else if (CheckWeapon(R99_PIXELS)) {
-            current_weapon_type := R99_WEAPON_TYPE
-            current_pattern := R99_PATTERN
-        } else if (CheckWeapon(RE45_PIXELS)) {
-            current_weapon_type := RE45_WEAPON_TYPE
-            current_pattern := RE45_PATTERN
-        } else if (CheckWeapon(P2020_PIXELS)) {
-            current_weapon_type := P2020_WEAPON_TYPE
-            current_pattern := P2020_PATTERN
-            is_single_fire_weapon := true
-        } else if (CheckWeapon(CAR_PIXELS)) { 
-            current_weapon_type := CAR_WEAPON_TYPE 
-            current_pattern := CAR_PATTERN 
-        } else if (CheckWeapon(ALTERNATOR_PIXELS)) {
-            current_weapon_type := ALTERNATOR_WEAPON_TYPE
-            current_pattern := ALTERNATOR_PATTERN
-        }else if (CheckWeapon(G7_PIXELS)) {
-            current_weapon_type := G7_WEAPON_TYPE
-            current_pattern := G7_Pattern
-            is_single_fire_weapon := true
-        }
-    } else if (check_point_color == HEAVY_WEAPON_COLOR) {
-        if (CheckWeapon(FLATLINE_PIXELS)) {
-            current_weapon_type := FLATLINE_WEAPON_TYPE
-            current_pattern := FLATLINE_PATTERN
-        } else if (CheckWeapon(PROWLER_PIXELS)) {
-            current_weapon_type := PROWLER_WEAPON_TYPE
-            current_pattern := PROWLER_PATTERN
-            is_single_fire_weapon := true
-        } else if (CheckWeapon(HEMLOK_PIXELS)) {
-            current_weapon_type := HEMLOK_WEAPON_TYPE
-            current_pattern := HEMLOK_PATTERN
-            is_single_fire_weapon := true
-        } else if (CheckWeapon(CAR_PIXELS)) { 
-            current_weapon_type := CAR_WEAPON_TYPE 
-            current_pattern := CAR_PATTERN 
-        } else if (CheckWeapon(P3030_PIXELS)) {
-            current_weapon_type := P3030_WEAPON_TYPE 
-            current_pattern := P3030_PATTERN
-        } else if (CheckWeapon(SPITFIRE_PIXELS)) {
-            current_weapon_type := SPITFIRE_WEAPON_TYPE
-            current_pattern := SPITFIRE_PATTERN
-        }
-    } else if (check_point_color == ENERGY_WEAPON_COLOR) {
-        if (CheckWeapon(LSTAR_PIXELS)) {
-            current_weapon_type := LSTAR_WEAPON_TYPE
-            current_pattern := LSTAR_PATTERN
-        }else if (CheckWeapon(VOLT_PIXELS)) {
-            current_weapon_type := VOLT_WEAPON_TYPE
-            current_pattern := VOLT_PATTERN
-	}else if (CheckWeapon(DEVOTION_PIXELS)) {
-            current_weapon_type := DEVOTION_WEAPON_TYPE
-            current_pattern := DEVOTION_PATTERN
-            if (CheckTurbocharger(DEVOTION_TURBOCHARGER_PIXELS)) {
-                current_pattern := TURBODEVOTION_PATTERN
-                current_weapon_type := DEVOTION_TURBO_WEAPON_TYPE
-            }
-        } else if (CheckWeapon(HAVOC_PIXELS)) {
-            current_weapon_type := HAVOC_WEAPON_TYPE
-            current_pattern := HAVOC_PATTERN
-            if (CheckTurbocharger(HAVOC_TURBOCHARGER_PIXELS)) {
-                current_pattern := TURBOHAVOC_PATTERN
-                current_weapon_type := HAVOC_TURBO_WEAPON_TYPE
-            }
-        }
-    } else if (check_point_color == SUPPY_DROP_COLOR) {
-        if (CheckWeapon(RAMPAGE_PIXELS)) {
-	    current_weapon_type := RAMPAGE_WEAPON_TYPE
-	    current_pattern := RAMPAGE_PATTERN
-        }
-    } else if (check_point_color == SHOTGUN_WEAPON_COLOR) {
-        current_weapon_type := SHOTGUN_WEAPON_TYPE
-    }
-    ; %hint_method%(current_weapon_type)
-}
+    
+四把武器更新
+Four
 
 ~E Up::
     Sleep, 200
